@@ -18,6 +18,7 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+/* header start */
 header {
     position: absolute;
     top: 0;
@@ -78,7 +79,162 @@ header {
     color: #000;
     border-right: 1px solid #000;
 }
+/* header end */
 
+/* banner start */
+.banner {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 0 100px;
+    background: #fff;
+    overflow: hidden;
+    transition: .5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-section {
+    position: absolute;
+    top: 0;
+    width: 25%;
+    height: 100%;
+    transition: 1s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    cursor: pointer;
+    transform: skew(0, 0);
+}
+
+.banner-section:hover img,
+.banner-section.active img {
+    opacity: 1;
+    visibility: visible;
+}
+
+.banner-section img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 150%;
+    z-index: 800;
+    transition: .5s;
+    object-fit: cover;
+    object-position: center;
+    opacity: 0;
+    visibility: hidden;
+} 
+
+.banner-section::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, .5);
+    backdrop-filter: blur(5px);
+    z-index: 900;
+}
+
+.banner-section.one {
+    left: 0;
+}
+
+.banner-section.one:hover::after,
+.banner-section.one.active::after {
+    background: var(--second);
+    opacity: .6;
+}
+
+.banner-section.two {
+    left: 25%;
+}
+
+.banner-section.two:hover::after,
+.banner-section.two.active::after {
+    background: var(--third);
+    opacity: .6;
+}
+
+.banner-section.three {
+    left: 50%;
+}
+
+.banner-section.three:hover::after,
+.banner-section.three.active::after {
+    background: var(--primary);
+    opacity: .6;
+}
+
+.banner-section.four {
+    left: 75%;
+}
+
+.banner-section.four:hover::after, 
+.banner-section.four.active::after {
+    background: var(--fourth);
+    opacity: .6;
+}
+
+.banner-section.four:hover img,
+.banner-section.four.active img {
+    right: 0;
+    left: auto;
+}
+
+.banner-section .content {
+    position: relative;
+    color: #000;
+    z-index: 1000;
+    transition: .5s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 40px;
+}
+
+.banner-section:hover .content,
+.banner-section.active .content {
+    color: #fff;
+}
+
+.banner-section .content h2 {
+    font-family: 'Berkshire Swash', sans-serif;
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+.banner-section .banner-btn {
+    border: 2px solid #000;
+    color: #000;
+    border-radius: 30px;
+    padding: 10px 30px;
+    width: 150px;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-top: 50px;
+    transition: .5s;
+}
+
+.banner-section:hover .banner-btn,
+.banner-section.active .banner-btn {
+    color: #fff;
+    border-color: #fff;
+}
+
+.banner-section .banner-btn:hover {
+    transform: translateX(20px);
+}
+
+
+/* banner end */
 
 
 
