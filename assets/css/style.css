@@ -42,6 +42,10 @@ header {
     transition: .5s;
 }
 
+.logo.white {
+    color: #fff;
+}
+
 .search {
     position: relative;
     width: 300px;
@@ -93,6 +97,40 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.banner.active .banner-section:nth-child(odd) {
+    transform: skew(0, -35deg);
+    box-shadow: 0 0 40px rgba(0, 0, 0, .3);
+}
+
+.banner.active .banner-section:nth-child(even) {
+    transform: skew(0, 35deg);
+    box-shadow: 0 0 40px rgba(0, 0, 0, .3);
+}
+
+.banner.active .banner-section {
+    width: 15%;
+}
+
+.banner.active .banner-section.two {
+    left: 15%;
+}
+
+.banner.active .banner-section.three {
+    right: 15%;
+    left: auto;
+}
+
+.banner.active .banner-section.four {
+    right: 0;
+    left: auto;
+}
+
+.banner.active .banner-section img {
+    opacity: 1;
+    visibility: visible;
+    width: 100%;
 }
 
 .banner-section {
@@ -233,6 +271,89 @@ header {
     transform: translateX(20px);
 }
 
+.banner .banner-content .item {
+    opacity: 0; 
+    visibility: hidden;
+    transition: 1s;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30vw;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    z-index: 700;
+}
+
+.banner .banner-content .item.active {
+    opacity: 1; 
+    visibility: visible;
+}
+
+.banner .banner-content .item h1 {
+    font-family: 'Berkshire Swash', cursive;
+    font-size: 3rem;
+    text-align: center;
+}
+
+.banner .banner-content .item p {
+    font-weight: 300;
+    letter-spacing: 1px;
+    line-height: 1.5;
+}
+
+.close-btn {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #000;
+    bottom: 10%;
+    font-size: 2.5rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: 1s;
+    z-index: 1000;
+}
+
+.banner.active .close-btn {
+    opacity: 1;
+    visibility: visible;
+}
+
+.sci {
+    position: absolute;
+    top: 20%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 8px 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, .3);
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0) translateY(-20rem);
+    transition: 1s;
+}
+
+.sci li {
+    list-style: none;
+}
+
+.sci li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 1.3em;
+    transition: .3s;
+}
+
+.sci.active {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1) translateY(0);
+}
 
 /* banner end */
 
