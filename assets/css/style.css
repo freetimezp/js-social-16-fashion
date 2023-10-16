@@ -357,7 +357,122 @@ header {
 
 /* banner end */
 
+/* responsive start */
+@media screen and (max-width: 768px) {
+    header {
+        padding: 10px 20px;
+    }
+    .logo {
+        font-size: 25px;
+    }
+    .search {
+        width: 200px;
+    }
+    .search input {
+        padding: -2px 10px -2px 50px;
+    }
 
+    .banner-section {
+        width: 100%;
+        height: 25vh;
+        display: flex;
+        flex-direction: column;
+    }
+    .banner-section.one {
+        top: 0;
+        left: 0;
+    }
+    .banner-section.two {
+        top: 25vh;
+        left: 0;
+    }
+    .banner-section.three {
+        top: 50vh;
+        left: 0;
+    }
+    .banner-section.four {
+        top: 75vh;
+        left: 0;
+    }
+    
+    .banner.active .banner-section .content h2 {
+        font-size: 1.5rem;
+    }
+    .banner.active .banner-section .banner-btn {
+        margin-top: 0;
+        padding: 5px 20px;
+    }
+
+    .banner-section .content h2 {
+        font-size: 2rem;
+    }
+    .banner.active .banner-section .content {
+        flex-direction: row;
+        align-items: center;
+        transform: translateY(0);
+        width: 300px;
+    }
+
+    .banner-section .content {
+        width: 250px;
+        gap: 10px;
+        transform: translateY(20px);
+    }
+    .banner-section .banner-btn {
+        margin-top: 15px;
+    }
+
+    .banner .banner-content .item {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 80vw;
+        padding: 20px;
+        gap: 20px;
+        z-index: 700;
+    }
+    .close-btn {
+        bottom: 28vh;
+    }
+
+    .banner.active .banner-section:nth-child(odd) {
+        transform: skew(-35deg, 0);
+    }
+    
+    .banner.active .banner-section:nth-child(even) {
+        transform: skew(35deg, 0);
+    }
+    .banner.active .banner-section {
+        width: 100%;
+        height: 15vw;
+    }
+    .banner.active .banner-section.two {
+        left: 0;
+        top: 11.5vh;
+    }
+    .banner.active .banner-section.three {
+        right: 0;
+        bottom: 11.5vh;
+        top: auto;
+    }
+    .banner.active .banner-section.four {
+        bottom: 0;
+        top: auto;
+    }
+
+    .banner .banner-content .item h1 {
+        font-size: 2rem;
+    }
+    .banner .banner-content .item p {
+        font-size: 0.9rem;
+        text-align: justify;
+    }
+    .sci {
+        top: 27vh;
+    }
+}
+
+/* responsive end */
 
 
 
